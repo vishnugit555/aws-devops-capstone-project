@@ -6,6 +6,7 @@ on:
     paths:
       - 'api/Dockerfile'
       - 'front-end-nextjs/Dockerfile'
+  workflow_dispatch: 
 
 jobs:
   publish_images:
