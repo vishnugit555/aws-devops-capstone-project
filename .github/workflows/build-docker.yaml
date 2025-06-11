@@ -15,10 +15,10 @@ jobs:
         uses: actions/checkout@v4
       - name: build image
         run: |
-          docker build ./api/ -t rishabkumar7/devops-qr-code-backend:latest
-          docker build ./front-end-nextjs/ -t rishabkumar7/devops-qr-code-frontend:latest
+          docker build ./api/ -t vishnutraining/devops-qr-code-backend:latest
+          docker build ./front-end-nextjs/ -t vishnutraining/devops-qr-code-frontend:latest
       - name: push image to docker hub
         run: |
-          docker login -u rishabkumar7 -p ${{ secrets.DOCKER_HUB_TOKEN }}
-          docker push rishabkumar7/devops-qr-code-backend:latest
-          docker push rishabkumar7/devops-qr-code-frontend:latest
+          docker login -u vishnutraining -p ${{ secrets.DOCKER_HUB_TOKEN }}
+          docker push vishnutraining/devops-qr-code-backend:latest
+          docker push vishnutraining/devops-qr-code-frontend:latest
